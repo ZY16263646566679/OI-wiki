@@ -1,4 +1,4 @@
-author: HeRaNO, konnyakuxzy, littlefrog
+author: HeRaNO, konnyakuxzy, littlefrog, pengzhiyong
 
 ![./images/kuaizhuanglianbiao.png](./images/kuaizhuanglianbiao.png "./images/kuaizhuanglianbiao.png")
 
@@ -61,11 +61,21 @@ using namespace __gnu_cxx;
 |             操作            |               作用              |
 | :-----------------------: | :---------------------------: |
 |      `rope <int > a`      | 初始化 `rope`（与 `vector` 等容器很相似） |
-|      `a.push_back(x)`     |       在 `a` 的末尾添加元素 `x`       |
+| `a.push_back(x)` 或 `a.append(x)` |   在 `a` 的末尾添加元素 `x`  |
+|      `a.pop_back()`     |       删除 `a` 末尾的一个元素       |
 |     `a.insert(pos, x)`    |   在 `a` 的 `pos` 个位置添加元素 `x`   |
 |     `a.erase(pos, x)`     |  在 `a` 的 `pos` 个位置删除 `x` 个元素  |
 |     `a.at(x)` 或 `a[x]`    |       访问 `a` 的第 `x` 个元素       |
 | `a.length()` 或 `a.size()` |           获取 `a` 的大小          |
+
+???+ note "更多操作"
+|             操作            |               作用              |
+| :-----------------------: | :---------------------------: |
+|      `a.mutable_begin()` / `a.mutable_end()`     |       获取 `a` 的可变起始/尾迭代器       |
+|     `a.insert(it, x)`    |   在 `a` 的 `it` 迭代器处添加元素 `x` 并返回新的迭代器（注意这里的 `it` 需是 `mutable` 的，下面的同理）   |
+|     `a.erase(it, x)`     |  将 `it` 迭代器指向的元素删除，并返回这个位置新的迭代器  |
+|     `a.front()` / `a.back()`    |       返回 `a` 的首/尾元素      |
+| `a.clear()` 或 `a.dump()` |  清空 `a` 中的元素（后者会输出一个 `NULL`） |
 
 ## 例题
 
